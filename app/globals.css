@@ -24,3 +24,139 @@ body {
   /* color: var(--foreground); */
   font-family: Arial, Helvetica, sans-serif;
 }
+/* styles/installpwa.css */
+.install-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 1000;
+  animation: slideUp 0.3s ease-out;
+  max-width: 350px;
+  width: 90%;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.popup-content {
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: #e0e0e0;
+}
+
+.popup-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.popup-content h3 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.popup-content p {
+  color: #666;
+  margin: 10px 0 20px;
+  font-size: 14px;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.install-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.install-btn:hover {
+  background: #0056b3;
+}
+
+.later-btn {
+  background: transparent;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.later-btn:hover {
+  background: #f8f9fa;
+}
+
+/* برای حالت دارک مود */
+@media (prefers-color-scheme: dark) {
+  .install-popup {
+    background: #2d2d2d;
+    color: white;
+  }
+  
+  .popup-content h3 {
+    color: white;
+  }
+  
+  .popup-content p {
+    color: #ccc;
+  }
+  
+  .close-btn {
+    background: #444;
+    color: white;
+  }
+  
+  .close-btn:hover {
+    background: #555;
+  }
+  
+  .later-btn {
+    border-color: #555;
+    color: #ccc;
+  }
+  
+  .later-btn:hover {
+    background: #3d3d3d;
+  }
+}

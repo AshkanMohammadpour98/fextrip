@@ -1,7 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import DB from '@/db';
+import {DB,  Countrys } from '@/db';
+import CountryShowcase from '@/components/formCoustom/CountryShowcase';
+import InstallPWA from '@/components/InstallPWA/InstallPWA';
+
+
 
 // گزینه‌های علاقه‌مندی‌ها
 const interests_options = [
@@ -199,8 +203,18 @@ export default function Home() {
     setIsModalOpen(false);
   };
 
+
+  console.log(DB());
+  console.log(Countrys());
+  
+  
   return (
     <>
+        <InstallPWA/>
+    {/* CountryShowcase */}
+    <CountryShowcase/>
+
+    {/* form start */}
       <div className="min-h-screen bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-100 py-8 px-4 sm:py-12">
         <div className="max-w-3xl mx-auto">
           {/* Header - برند و شعار اصلی */}
@@ -218,7 +232,8 @@ export default function Home() {
               Smart Travel Planning Made Simple
             </h1>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Plan your perfect trip in minutes with AI-powered recommendations tailored to your interests and budget 🌍
+              Don’t know where to go? 
+Just enter your country, budget, and interests — we’ll smartly suggest your next travel destination  🌍
             </p>
             
             {/* نوار ویژگی‌ها */}
@@ -647,6 +662,7 @@ export default function Home() {
           </div>
         </div>
       )}
+      {/* form end */}
     </>
   );
 }
