@@ -1,11 +1,11 @@
 {
-  "name": "Cafe Web App",
-  "short_name": "Cafe",
+  "name": "fextrip Travel",
+  "short_name": "fextrip",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
-  "description": "سفارش آنلاین کافه",
+  "description": "fextrip Smart Travel Planning Made Simple ",
   "icons": [
     {
       "src": "/icons/192.png",
