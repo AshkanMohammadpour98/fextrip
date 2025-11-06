@@ -5,31 +5,27 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-// export const metadata = {
-//   title: "FEXTEIP",
-//   description: "سفری راحت و آسوده",
-// }
 export const metadata = {
-  title: 'Cafe Web App',
-  description: 'سفارش آنلاین کافه',
+  title: 'fextrip',
+  description: 'Smart Travel Planning Made Simple',
   manifest: '/manifest.json',
   themeColor: '#4CAF50',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   // موارد اضافی مفید:
-  applicationName: 'Cafe Web App',
+  applicationName: 'fextrip',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Cafe Web App',
+    title: 'fextrip',
   },
   formatDetection: {
     telephone: false,
   },
   openGraph: {
-    title: 'Cafe Web App',
+    title: 'fextrip',
     description: 'سفارش آنلاین کافه',
-    url: 'https://yoursite.com',
-    siteName: 'Cafe Web App',
+    url: 'https://fextrip.com',
+    siteName: 'fextrip',
     type: 'website',
   },
   icons: {
